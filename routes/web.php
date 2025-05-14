@@ -23,7 +23,7 @@ Route::get('/', function () {
 
 Route::get('admin/login', function () {
     return view('admin-panel.login');
-})->name('login');
+})->name('admin.login');
 
 Route::get('shop', function () {
     return view('shop');
@@ -64,6 +64,7 @@ Route::middleware('auth')->group(function () {
 // User Controller
 
 // admin
-Route::get('admin/login', [LoginController::class, 'login'])->name('admin.login');
+Route::post('admin/login', [LoginController::class, 'login'])->name('admin.login');
+Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('admin/register', [RegisterController::class, 'create'])->name('admin.register');
 Route::post('admin/store', [RegisterController::class, 'register'])->name('admin.store');

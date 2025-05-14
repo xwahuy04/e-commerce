@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Gentelella Alela! | </title>
+    <title>{{ env('APP_NAME') }} </title>
 
     <!-- Bootstrap -->
     <link href="{{ asset('admin-panel/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -29,6 +29,7 @@
             <form action="{{ route('admin.login') }}" method="POST">
               @csrf
               <h1>Login Form</h1>
+              @include('error_messages')
               <div>
                 <input type="email" name="email" class="form-control" placeholder="Email" required=/>
               </div>
@@ -51,8 +52,8 @@
                 <br />
 
                 <div>
-                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                  <h1><i class="fa fa-paw"></i> {{ env('APP_NAME') }}</h1>
+                  <p>©2016 All Rights Reserved. {{ env('APP_NAME') }} is a Bootstrap 3 template. Privacy and Terms</p>
                 </div>
               </div>
             </form>

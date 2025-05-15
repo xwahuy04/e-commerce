@@ -14,4 +14,8 @@ class ProductController extends Controller
     {
         return view('admin-panel.products.create');
     }
+    public function store(Request $request)
+    {
+        
+    }
 }

@@ -16,9 +16,9 @@
               <div class="col-md-12 col-sm-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Users <small>List</small></h2>\
+                    <h2>Users <small>List</small></h2>
                       </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      {{-- <li><a class="close-link"><i class="fa fa-close"></i></a> --}}
                       </li>
                     </ul>
                     <div class="clearfix"></div>

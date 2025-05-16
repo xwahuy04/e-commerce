@@ -57,8 +57,13 @@ Route::middleware('auth')->group(function () {
         return view('admin-panel.dashboard');
     })->name('dashboard');
 
-    Route::get('products/list', [ProductController::class, 'index'])->name('products.list');
-    Route::get('products/create', [ProductController::class, 'create'])->name('products.create');
+
+    Route::prefix('products')->group(function () {
+       
+        Route::get('list', [ProductController::class, 'index'])->name('products.list');
+        Route::get('create', [ProductController::class, 'create'])->name('products.create');
+        Route::post('store', [ProductController::class, 'store'])->name('products.store');
+    });
 });
 
 // User Controller
